@@ -1,0 +1,177 @@
+/* Default */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    background-color: hsl(0, 0%, 81%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GRID */
+.content {
+    margin: 2rem 0;
+    width: 80%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Block */
+.block {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: hsl(0, 100%, 50%);
+}
+
+/* Logo and Nick container */
+.logoNick {
+    display: flex;
+    gap: 1rem;
+}
+
+.foto {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.nick h4 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+
+.nick p {
+    color: hsl(0, 0%, 81%);
+    font-size: .8rem;
+}
+
+/* H2 and P */
+.block h2 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+
+.block p {
+    color: hsl(0, 0%, 81%);
+}
+
+
+/* Persons */
+.Daniel {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    background: hsl(263, 55%, 52%);
+}
+
+.Daniel .foto {
+    border: .2rem solid hsl(263, 55%, 70%);
+}
+
+.Jonathan {
+    grid-row: 1;
+    grid-column: 3 / span 1;
+    background: hsl(217, 19%, 35%);
+}
+
+.Jeanette {
+    grid-row: 2;
+    grid-column: 1;
+    background: hsl(0, 0%, 100%);
+}
+
+.Jeanette .nick h4 {
+    color: hsl(217, 19%, 35%);
+}
+
+.Jeanette h2 {
+    color: hsl(217, 19%, 35%);
+    font-weight: 600;
+}
+
+.Jeanette>p {
+    color: hsl(0, 0%, 70%);
+}
+
+.Patrick {
+    grid-row: 2;
+    grid-column: 2 / span 2;
+    background: hsl(219, 29%, 14%);
+}
+
+.Patrick .foto {
+    border: .2rem solid hsl(263, 55%, 70%);
+}
+
+.Kira {
+    grid-row: 1 / span 2;
+    grid-column: 4;
+    background: hsl(0, 0%, 100%);
+}
+
+.Kira h4 {
+    color: hsl(217, 19%, 35%);
+}
+
+.Kira h2 {
+    color: hsl(217, 19%, 35%);
+    font-weight: 600;
+}
+
+.Kira>p {
+    color: hsl(0, 0%, 70%);
+}
+
+
+/* Media queries */
+@media screen and (max-width: 1440px) {
+    .content {
+        width: 90%;
+        gap: 1.5rem;
+    }
+
+    .block {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .content {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .block {
+        padding: 1.5rem;
+    }
+}
